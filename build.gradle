@@ -1,0 +1,36 @@
+group 'com.epam'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-orm', version: '4.3.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.2.RELEASE'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.5.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.5.1'
+
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '4.2.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.2.1.RELEASE'
+
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '4.1.2.Final'
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '4.1.2.Final'
+
+    runtime group: 'com.h2database', name: 'h2', version: '1.4.193'
+
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+}
